@@ -1,0 +1,71 @@
+{
+  "source": "BGS UK Digital Geothermal Catalogue v2 (DOI 10.5285/9c324699-abf1-4412-ab9f-39308507082d)",
+  "gb_temperature_rows_clean": 8900,
+  "gb_temperature_unique_sites": 1731,
+  "equilibrium_rows_modelled": 5367,
+  "equilibrium_unique_sites": 108,
+  "holdout_unique_sites": 19,
+  "temperature_obs_type_counts": {
+    "Equilibrium Temperature Log Data": 4939,
+    "Bottom Hole Temperature": 2548,
+    "Log Temperature": 497,
+    "Virgin Strata Temperature": 267,
+    "Equilibrium Measurement": 240,
+    "Equilibrium Temperature Log Data (Open Hole)": 188,
+    "Drill Stem Test": 110,
+    "Coal Field Measurement": 110,
+    "Production Test Measurement": 1
+  },
+  "gb_heat_flow_rows_clean": 131,
+  "gb_conductivity_rows_clean": 3990,
+  "approximate_cornwall_window_rows": 13,
+  "approximate_cornwall_window_unique_sites": 6,
+  "spatial_block_size_m": 50000,
+  "best_model_by_mae": "Histogram gradient boosting",
+  "metrics": [
+    {
+      "model": "Histogram gradient boosting",
+      "n_train": 4596,
+      "n_test": 771,
+      "n_spatial_blocks_train": 46,
+      "n_spatial_blocks_test": 12,
+      "MAE_C": 2.638138311483403,
+      "RMSE_C": 3.88592584645329,
+      "R2": 0.9454794121294753,
+      "gradient_C_per_km": NaN
+    },
+    {
+      "model": "Random forest",
+      "n_train": 4596,
+      "n_test": 771,
+      "n_spatial_blocks_train": 46,
+      "n_spatial_blocks_test": 12,
+      "MAE_C": 3.140411744204035,
+      "RMSE_C": 4.328026989876482,
+      "R2": 0.9323681241868439,
+      "gradient_C_per_km": NaN
+    },
+    {
+      "model": "Linear gradient baseline (depth only)",
+      "n_train": 4596,
+      "n_test": 771,
+      "n_spatial_blocks_train": 46,
+      "n_spatial_blocks_test": 12,
+      "MAE_C": 3.7004013138427196,
+      "RMSE_C": 4.989525598060405,
+      "R2": 0.9101144205747891,
+      "gradient_C_per_km": 35.21994763513757
+    },
+    {
+      "model": "Median baseline",
+      "n_train": 4596,
+      "n_test": 771,
+      "n_spatial_blocks_train": 46,
+      "n_spatial_blocks_test": 12,
+      "MAE_C": 10.909202334630349,
+      "RMSE_C": 19.25103986865757,
+      "R2": -0.3380732822678518,
+      "gradient_C_per_km": NaN
+    }
+  ]
+}
